@@ -43,3 +43,15 @@ class MyWork(models.Model):
     description = models.CharField(max_length=255)
     image = models.CharField(max_length=255)
     link = models.CharField(max_length=255)
+
+
+class Myinfo(models.Model):
+    plateform_name = models.CharField(max_length=255)
+    plateform_id = models.CharField(max_length=255)
+    plateform_link = models.CharField(max_length=255)
+
+
+class ContactMe(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    description = models.CharField(max_length=400)
