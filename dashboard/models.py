@@ -22,3 +22,13 @@ class ExperienceTechnology(models.Model):
     exp_cat_id = models.ForeignKey(ExperienceCategory, on_delete=models.CASCADE)
     tech_name = models.CharField(max_length=255)
     tech_qualification = models.CharField(max_length=45, choices=QUALIFICATION_CHOICES)
+
+
+class Service(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
+
+
+class SubService(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    sub_service = models.CharField(max_length=255)
