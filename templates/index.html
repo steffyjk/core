@@ -121,13 +121,13 @@
                     <div class="about__box">
                         <i class='bx bx-award about__icon'></i>
                         <h3 class="about__title">Experience</h3>
-                        <span class="about__subtitle">2 Years Working</span>
+                        <span class="about__subtitle">{{ about_me.experience }} Years Working</span>
                     </div>
 
                     <div class="about__box">
                         <i class='bx bx-briefcase-alt about__icon' ></i>
                         <h3 class="about__title">Completed</h3>
-                        <span class="about__subtitle">24 + Projects</span>
+                        <span class="about__subtitle">{{about_me.total_projects}} + Projects</span>
                     </div>
 
                     <div class="about__box">
@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <p class="about__description">I am a Python backend developer with extensive experience creating web applications. While my focus has been primarily on the back-end, I have some familiarity with front-end development, enabling me to collaborate effectively with front-end teams..</p>
+                <p class="about__description">{{about_me.description}}</p>
 
                 <a href="#contact" class="button">Contact Me</a>
             </div>
