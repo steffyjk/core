@@ -32,3 +32,14 @@ class Service(models.Model):
 class SubService(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     sub_service = models.CharField(max_length=255)
+
+
+class WorkCategory(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class MyWork(models.Model):
+    work_category = models.ForeignKey(WorkCategory, on_delete=models.CASCADE)
+    description = models.CharField(max_length=255)
+    image = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
