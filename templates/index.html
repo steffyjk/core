@@ -213,61 +213,26 @@
 
         <div class="work__filters">
             <span class="work__item active-work" data-filter='all'>All</span>
-            <span class="work__item" data-filter='.web'>Web</span>
-            <span class="work__item" data-filter='.blender'>3D</span>
-            <span class="work__item" data-filter='.design'>Design</span>
+            {% for work_category in work_categories%}
+            <span class="work__item" data-filter={{work_category.name}}'>{{work_category.name}}</span>
+            {% endfor %}
         </div>
 
         <div class="work__container container grid">
-            <div class="work__card mix web">
-                <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
+            {% for work_category in work_categories%}
+                {% for work in work_category.mywork_set.all %}
+                    <div class=f"work__card mix {{work_category.name}}">
+                        <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
 
-                <h3 class="work__title">Web design</h3>
+                        <h3 class="work__title">{{work.description}}</h3>
 
-                <a href="#" class="work__button">
-                    Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
-                </a>
-            </div>
+                        <a href={{work.link}} class="work__button">
+                            link <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
 
-            <div class="work__card mix blender">
-                <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
-
-                <h3 class="work__title">3D animation</h3>
-
-                <a href="#" class="work__button">
-                    Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
-                </a>
-            </div>
-
-            <div class="work__card mix design">
-                <img src="../static/assets/images/ai.jpg"" alt="" class="work__img">
-
-                <h3 class="work__title">App design</h3>
-
-                <a href="#" class="work__button">
-                    Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
-                </a>
-            </div>
-
-            <div class="work__card mix web">
-                <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
-
-                <h3 class="work__title">Brand design</h3>
-
-                <a href="#" class="work__button">
-                    Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
-                </a>
-            </div>
-
-            <div class="work__card mix blender">
-                <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
-
-                <h3 class="work__title">Product modeling</h3>
-
-                <a href="#" class="work__button">
-                    Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
-                </a>
-            </div>
         </div>
     </section>
 
