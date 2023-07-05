@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from .models import AboutMe, ExperienceTechnology, ExperienceCategory
+from .models import AboutMe, ExperienceTechnology, ExperienceCategory, Service
 
 
 def home(request):
@@ -19,8 +19,10 @@ def home(request):
                     "tech_qualification": exp_tech.tech_qualification
                 })
     categories = ExperienceCategory.objects.all()
+    services = Service.objects.all()
     context = {
         "about_me": about_me,
         "categories": categories,
+        "services": services
     }
     return render(request, 'index.html', context=context)
