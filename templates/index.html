@@ -243,35 +243,20 @@
 
         <div class="testimonial__container container swiper">
             <div class="swiper-wrapper">
-                <div class="testimonial__card swiper-slide">
-                    <img src="../static/assets/images/ai.jpg" alt="" class="testimonial__img">
+                {% for testimonial in testimonials %}
+                    <div class="testimonial__card swiper-slide">
+                        <img src="../static/assets/images/ai.jpg" alt="" class="testimonial__img">
 
-                    <h3 class="testimonial__name">001 002</h3>
+                        <h3 class="testimonial__name">{{testimonial.testimonial_provider_name}}</h3>
 
-                    <p class="testimonial__desctiption">
-                        A really good job, all aspects of the project were followed step by step and with good results.
-                    </p>
-                </div>
+                        <p class="testimonial__desctiption">
+                            {{testimonial.review_text}}
+                        </p>
+                    </div>
+                {% endfor %}
 
-                <div class="testimonial__card swiper-slide">
-                    <img src="../static/assets/images/ai.jpg" alt="" class="testimonial__img">
 
-                    <h3 class="testimonial__name">003 004</h3>
 
-                    <p class="testimonial__desctiption">
-                        A really good job, all aspects of the project were followed step by step and with good results.
-                    </p>
-                </div>
-
-                <div class="testimonial__card swiper-slide">
-                    <img src="../static/assets/images/ai.jpg" alt="" class="testimonial__img">
-
-                    <h3 class="testimonial__name">005 006</h3>
-
-                    <p class="testimonial__desctiption">
-                        A really good job, all aspects of the project were followed step by step and with good results.
-                    </p>
-                </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -287,35 +272,17 @@
                 <h3 class="contact__title">Talk to me</h3>
 
                 <div class="contact__info">
-                    <div class="contact__card">
-                        <i class='bx bx-mail-send contact__card-icon'></i>
-                        <h3 class="contact__card-title">Email</h3>
-                        <span class="contact__card-data">steffy.jk2018@gmail.com</span>
+                    {% for info in my_info %}
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">{{info.plateform_name}}</h3>
+                            <span class="contact__card-data">{{info.plateform_id}}</span>
 
-                        <a href="https://www.google.com/" target="_blank" class="contact__button">
-                            Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                        </a>
-                    </div>
-
-                    <div class="contact__card">
-                        <i class='bx bxl-whatsapp contact__card-icon' ></i>
-                        <h3 class="contact__card-title">Whatsapp</h3>
-                        <span class="contact__card-data">111-222-333</span>
-
-                        <a href="https://www.whatsapp.com/" target="_blank" class="contact__button">
-                            Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                        </a>
-                    </div>
-
-                    <div class="contact__card">
-                        <i class='bx bxl-messenger contact__card-icon' ></i>
-                        <h3 class="contact__card-title">Messenger</h3>
-                        <span class="contact__card-data">user.s002</span>
-
-                        <a href="https://play.google.com/store/apps/details?id=com.facebook.orca&hl=en_IN&gl=US" target="_blank" class="contact__button">
-                            Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                        </a>
-                    </div>
+                            <a href={{info.plateform_link}} target="_blank" class="contact__button">
+                                Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
+                            </a>
+                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {% endfor %}
                 </div>
             </div>
 

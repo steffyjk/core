@@ -82,3 +82,12 @@ class ContactMe(models.Model):
 
     def __str__(self):
         return f"name: {self.name} | email: {self.email} | desc: {self.description}"
+
+
+class Testimonial(models.Model):
+    testimonial_provider_name = models.CharField(max_length=150)
+    profile_pic = models.CharField(max_length=150)
+    review_text = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"name: {self.testimonial_provider_name} | review_text: {self.review_text}"
