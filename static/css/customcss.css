@@ -165,6 +165,7 @@ body.light-theme {
 }
 
 .light-theme .skills__content,
+.light-theme .skills2__content,
 .light-theme .services__card,
 .light-theme .work__card,
 .light-theme .testimonial__card,
@@ -482,11 +483,20 @@ body.light-theme {
     row-gap: 2rem;
     padding-top: 1rem;
 }
+.skills2__container {
+    row-gap: 1rem;
+    padding-top: 0.5rem;
+}
 
 .skills__content {
     background-color: var(--container-color);
     padding: 1.5rem;
     border-radius: 1.25rem;
+}
+.skills2__content {
+    background-color: var(--container-color);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .skills__title {
@@ -505,6 +515,8 @@ body.light-theme {
 
 .skills__group {
     display: grid;
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 3rem;
     align-content: flex-start;
     row-gap: 1rem;
 }
@@ -966,9 +978,15 @@ body.light-theme {
     .skills__container {
         justify-content: center;
     }
+    .skills2__container {
+        justify-content: center;
+    }
 
     .skills__content {
         padding: 2rem 4rem;
+    }
+    .skills2__content {
+        padding: 1rem 2rem;
     }
 
     .services__container {

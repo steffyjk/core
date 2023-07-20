@@ -154,7 +154,7 @@
                 <div class="skills__content">
                     <h3 class="skills__title">{{ category.name }}</h3>
                     <div class="skills__box">
-                        <div class="skills__group">
+                        <div class="skills__group grid">
                             {% for technology in category.experiencetechnology_set.all %}
                                 <div class="skills__data">
                                     <i class='bx bxs-badge-check' ></i>
@@ -221,7 +221,7 @@
         <div class="work__container container grid">
             {% for work_category in work_categories%}
                 {% for work in work_category.mywork_set.all %}
-                    <div class=f"work__card mix {{work_category.name}}">
+                    <div class="work__card mix col-md-6 ">
                         <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
 
                         <h3 class="work__title">{{work.description}}</h3>
