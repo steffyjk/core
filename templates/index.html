@@ -83,7 +83,7 @@
             </div>
 
             <div class="home__handle">
-                <img src="../static/assets/images/ai.jpg" alt="" class="home__img">
+                <img src="../statics/assets/images/ai.jpg" alt="" class="home__img">
             </div>
 
             <div class="home__social">
@@ -114,7 +114,7 @@
         <h2 class="section__title">About Me</h2>
 
         <div class="about__container container grid">
-            <img src="../static/assets/images/ai.jpg" alt="" class="about__img">
+            <img src="../statics/assets/images/ai.jpg" alt="" class="about__img">
 
             <div class="about__data">
                 <div class="about__info">
@@ -222,7 +222,7 @@
             {% for work_category in work_categories%}
                 {% for work in work_category.mywork_set.all %}
                     <div class="work__card mix col-md-6 ">
-                        <img src="../static/assets/images/ai.jpg" alt="" class="work__img">
+                        <img src="../statics/assets/images/ai.jpg" alt="" class="work__img">
 
                         <h3 class="work__title">{{work.description}}</h3>
 
@@ -245,7 +245,7 @@
             <div class="swiper-wrapper">
                 {% for testimonial in testimonials %}
                     <div class="testimonial__card swiper-slide">
-                        <img src="../static/assets/images/ai.jpg" alt="" class="testimonial__img">
+                        <img src="../statics/assets/images/ai.jpg" alt="" class="testimonial__img">
 
                         <h3 class="testimonial__name">{{testimonial.testimonial_provider_name}}</h3>
 
@@ -379,6 +379,6 @@
 <!--<script src="assets/js/mixitup.min.js"></script>-->
 
 <!-- MAIN JS -->
-<script src="../static/js/main.js"></script>
+<script src="../statics/js/main.js"></script>
 </body>
 </html>
